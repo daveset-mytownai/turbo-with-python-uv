@@ -6,6 +6,9 @@
     "lint": "uv run ruff check --fix .",
     "fmt": "uv run ruff format .",
     "test": "uv run pytest"
+  },
+  "dependencies": {
+    "@repo:python-lib": "workspace:*"
   }
 }
 

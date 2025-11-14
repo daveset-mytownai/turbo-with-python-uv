@@ -1,0 +1,7 @@
+{
+  "name": "@repo:python-lib",
+  "scripts": {
+    "dev": "echo no runnable code in this library",
+    "build": "uv build"
+  }
+}
