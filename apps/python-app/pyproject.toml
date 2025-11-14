@@ -1,0 +1,18 @@
+[project]
+name = "python-app"
+version = "0.1.0"
+description = "A simple python app"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "python-lib"
+]
+
+[project.scripts]
+python-app = "python_app:main"
+
+[build-system]
+requires = ["uv_build>=0.9.7,<0.10.0"]
+build-backend = "uv_build"

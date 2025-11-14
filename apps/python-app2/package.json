@@ -1,0 +1,11 @@
+{
+  "name": "python-app2",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "uv sync --link-mode=copy && cp ../../uv.lock .",
+    "lint": "uv run ruff check --fix .",
+    "fmt": "uv run ruff format .",
+    "test": "uv run pytest"
+  }
+}
+

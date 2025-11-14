@@ -1,0 +1,17 @@
+[project]
+name = "turbo-with-python-uv"
+version = "0.1.0"
+description = "Example uv workspace with library and app"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "packages/python-lib",
+    "apps/python-app",
+    "apps/python-app2",
+]
+
+[tool.uv.sources]
+python-lib = { workspace = true }
+
