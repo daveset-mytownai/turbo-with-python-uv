@@ -15,14 +15,11 @@
       "dependsOn": ["^build"],
       "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
     },
-    "python-app#build": {
-      "dependsOn": ["^build"],
-      "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
-    },
     "python-app2#build": {
       "dependsOn": ["^build", "@repo/python-lib#build"],
       "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
     },
+    "dev": {},
     "prebuild": {},
     "lint": {},
     "fmt": {},
