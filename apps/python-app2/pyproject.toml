@@ -10,9 +10,6 @@ dependencies = [
     "python-lib"
 ]
 
-[tool.uv.sources]
-python-lib = { workspace = true }
-
 [project.scripts]
 python-app = "python_app:main"
 
