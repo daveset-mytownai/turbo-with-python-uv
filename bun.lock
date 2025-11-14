@@ -14,10 +14,15 @@
         "tooling-config": "*",
       },
     },
-    "apps/app-b": {
-      "name": "app-b",
+    "apps/python-app": {
+      "name": "python-app",
+      "version": "0.0.1",
+    },
+    "apps/python-app2": {
+      "name": "python-app2",
+      "version": "0.0.1",
       "dependencies": {
-        "tooling-config": "*",
+        "@repo/python-lib": "workspace:*",
       },
     },
     "packages/pkg-a": {
@@ -26,24 +31,23 @@
         "tooling-config": "*",
       },
     },
-    "packages/pkg-b": {
-      "name": "pkg-b",
-      "dependencies": {
-        "tooling-config": "*",
-      },
+    "packages/python-lib": {
+      "name": "@repo/python-lib",
     },
     "packages/tooling-config": {
       "name": "tooling-config",
     },
   },
   "packages": {
-    "app-a": ["app-a@workspace:apps/app-a"],
+    "@repo/python-lib": ["@repo/python-lib@workspace:packages/python-lib"],
 
-    "app-b": ["app-b@workspace:apps/app-b"],
+    "app-a": ["app-a@workspace:apps/app-a"],
 
     "pkg-a": ["pkg-a@workspace:packages/pkg-a"],
 
-    "pkg-b": ["pkg-b@workspace:packages/pkg-b"],
+    "python-app": ["python-app@workspace:apps/python-app"],
+
+    "python-app2": ["python-app2@workspace:apps/python-app2"],
 
     "tooling-config": ["tooling-config@workspace:packages/tooling-config"],
 

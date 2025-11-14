@@ -11,20 +11,21 @@
         "dist/**"
       ]
     },
-    "@repo:python-lib#build": {
+    "@repo/python-lib#build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "uv.lock", "!__pycache__"]
+      "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
     },
     "python-app#build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", "apps/python-app/uv.lock", "uv.lock", "!__pycache__"]
+      "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
     },
     "python-app2#build": {
-      "dependsOn": ["^build", "@repo:python-lib#build"],
-      "outputs": ["dist/**", "apps/python-app/uv.lock", "uv.lock", "!__pycache__"]
+      "dependsOn": ["^build", "@repo/python-lib#build"],
+      "outputs": ["../../dist/**", "uv.lock", "!__pycache__"]
     },
     "prebuild": {},
     "lint": {},
+    "fmt": {},
     "check-types": {}
   }
 }

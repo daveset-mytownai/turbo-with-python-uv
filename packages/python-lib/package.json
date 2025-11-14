@@ -1,7 +1,9 @@
 {
-  "name": "@repo:python-lib",
+  "name": "@repo/python-lib",
   "scripts": {
     "dev": "echo no runnable code in this library",
-    "build": "uv build"
+    "build": "uv build",
+    "lint": "uv run ruff check --fix .",
+    "fmt": "uv run ruff format ."
   }
 }
