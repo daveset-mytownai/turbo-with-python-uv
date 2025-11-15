@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "uv run uvicorn main:app --reload",
-    "build": "uv sync --link-mode=copy && cp ../../uv.lock .",
+    "build": "uv venv --no-project --allow-existing && source .venv/bin/activate && uv sync --no-dev --active --link-mode=copy --directory . --project python-app2 && cp ../../uv.lock .",
     "lint": "uv run ruff check --fix .",
     "fmt": "uv run ruff format .",
     "test": "uv run pytest"
