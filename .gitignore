@@ -25,3 +25,5 @@ yarn-error.log*
 
 apps/python-*/uv.lock
 __pycache__
+
+.claude
