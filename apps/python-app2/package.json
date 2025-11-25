@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "uv run uvicorn main:app --reload",
-    "build": "echo \"No build step - let Vercel do its thing\"",
+    "build": "uv sync",
     "lint": "uv run ruff check --fix .",
     "fmt": "uv run ruff format .",
     "test": "uv run pytest"
