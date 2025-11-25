@@ -1,5 +1,6 @@
 {
   "lockfileVersion": 1,
+  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "my-turborepo",
@@ -7,28 +8,11 @@
         "turbo": "^2.6.1",
       },
     },
-    "apps/app-a": {
-      "name": "app-a",
-      "dependencies": {
-        "pkg-a": "*",
-        "tooling-config": "*",
-      },
-    },
-    "apps/python-app": {
-      "name": "python-app",
-      "version": "0.0.1",
-    },
     "apps/python-app2": {
       "name": "python-app2",
       "version": "0.0.1",
       "dependencies": {
         "@repo/python-lib": "workspace:*",
-      },
-    },
-    "packages/pkg-a": {
-      "name": "pkg-a",
-      "dependencies": {
-        "tooling-config": "*",
       },
     },
     "packages/python-lib": {
@@ -40,12 +24,6 @@
   },
   "packages": {
     "@repo/python-lib": ["@repo/python-lib@workspace:packages/python-lib"],
-
-    "app-a": ["app-a@workspace:apps/app-a"],
-
-    "pkg-a": ["pkg-a@workspace:packages/pkg-a"],
-
-    "python-app": ["python-app@workspace:apps/python-app"],
 
     "python-app2": ["python-app2@workspace:apps/python-app2"],
 
