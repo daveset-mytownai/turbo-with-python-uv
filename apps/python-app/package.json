@@ -1,0 +1,11 @@
+{
+  "name": "python-app",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "uv sync --link-mode=copy && uv build",
+    "lint": "uv run ruff check --fix .",
+    "fmt": "uv run ruff format .",
+    "test": "uv run pytest"
+  }
+}
+
